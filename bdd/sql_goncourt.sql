@@ -52,7 +52,8 @@ CREATE TABLE jury(
 
 CREATE TABLE book(
    b_id INT,
-   b_summary VARCHAR(400),
+   b_title VARCHAR(50) NOT NULL,
+   b_summary TEXT,
    b_editor VARCHAR(30) NOT NULL,
    b_publication_date DATE NOT NULL,
    b_nb_pages INT NOT NULL,
@@ -72,40 +73,11 @@ CREATE TABLE include(
 );
 
 INSERT INTO author VALUES
-(1, 'Philippe','Jaenada',"Philippe Jaenada est né à Saint-Germain-en-Laye où ses grands-parents maternels possédaient le restaurant Le Grand Cerf. Issu d’une famille de pieds-noirs récemment revenue d’Algérie, il grandit dans une banlieue pavillonnaire, à Morsang-sur-Orge en Essonne. Après des études scientifiques, il s’installe à Paris en 1986 où il enchaîne les petits boulots pendant plusieurs années. Sa première nouvelle est publiée en 1990 dans L'Autre Journal. Ses sept premiers romans sont d'inspiration autobiographique. Outre ses livres, il a écrit des articles pour le magazine Voici pendant plusieurs années, avant d’arrêter en 2022 pour se concentrer pleinement à ses romans. Avec sa compagne Anne-Catherine Fath, ils ont un fils, Ernest, né en août 2000. Habitant le 10e arrondissement, il a ses habitudes au Bistrot Lafayette."),
-(2, 'Anne', 'Godard', "Anne Godard est la fille d'un père libraire. Après un CAPES et une agrégation de lettres modernes obtenue en 1995, Anne Godard soutient en 2000 sa thèse (sous la direction d'Yves Hersant) sur le thème de « La Renaissance dialogique. Imitation et dialogisme dans les dialogues de la Renaissance ». En 2002, elle devient maitresse de conférence en « Langue et littérature françaises » à l'université Sorbonne-Nouvelle où elle enseigne dans le département de français langue étrangère. Ses travaux portent sur la lecture subjective, l'écriture créative et le plurilinguisme littéraire.
-
-Son premier roman, L'Inconsolable, est publié par Les Éditions de Minuit et obtient le grand prix RTL-Lire en 2006. Ecrit à la deuxième personne, il aborde le thème du deuil et de la mise à distance des vivants.
-
-Plus de dix ans après la sortie de son premier roman – Anne Godard explique passer par des phases de nécessité et d'impossibilité d'écriture – paraît son deuxième roman, Une chance folle, dont la « genèse très longue » a été liée à la difficulté de « trouver une voix, finalement simple, puisqu'il s'agit de laisser parler la jeune fille », Magda, personnage central de l'œuvre, qui s'émancipe progressivement d'une histoire qu'elle porte comme un stigmate.
-
-Elle publie en 2026 Nous aussi chez Actes Sud. Un roman choral écrit au on indéfini, portrait du fonctionnement toxique d’une grande famille bourgeoise, dont les enfants sont comme les membres d’un grand corps indifférencié."),
-(3,'Yannick','Haenel',"En 1997, il fonde la revue Ligne de risque, qu'il anime aujourd'hui avec François Meyronnis et Valentin Retz. Il enseigne le français jusqu'en 2005 au lycée La Bruyère de Versailles.
-
-Il publie plusieurs romans, dont Introduction à la mort française et Évoluer parmi les avalanches, ainsi qu'un essai sur les tapisseries de La Dame à la licorne intitulé À mon seul désir. Il codirige également deux volumes d'entretiens avec Philippe Sollers, Ligne de risque et Poker.
-
-En 2007, il publie dans la collection « L'Infini » (éditions Gallimard), dirigée par Philippe Sollers, Cercle, roman qui reçoit le prix Décembre et le prix Roger-Nimier.
-
-En 2008-2009, Haenel est pensionnaire à l'Académie de France à Rome-Villa Médicis.
-
-En 2009, il publie le roman Jan Karski, qui reçoit le prix Interallié.
-
-En 2017, il publie le roman Tiens ferme ta couronne, finaliste du prix Goncourt et lauréat du prix Médicis.
-
-Yannick Haenel est chroniqueur pour le magazine de littérature et de cinéma Transfuge, depuis 2010, et à Charlie Hebdo, depuis la reprise de la publication après les attentats de janvier 2015.
-
-En 2024, il fonde la revue Aventures ainsi qu'une collection éponyme aux éditions Gallimard.
-
-En 2026, il publie La solitude des professeurs est infinie aux éditions Gallimard, le roman est retenu pour la première sélection du Prix Goncourt."),
-(4, 'Lilia', 'Hassaine',"Lilia Hassaine, née en 1991, est une romancière, journaliste française et chroniqueuse de télévision. En septembre 2019, elle publie un premier roman fantastique, chez Gallimard, L'Œil du paon. Son livre est retenu dans la sélection du prix de la Vocation 2020.
-
-Son deuxième roman, Soleil amer, publié en août 2021, aborde l'intégration des populations algériennes dans la société française, des années 1960 aux années 1980. Le Figaro estime que « la plume de Lilia Hassaine est fine, singulière, juste, quand elle parle de la solitude ». En septembre 2021, il figure sur la liste des quinze livres retenus pour le prix Goncourt 2021. En mars 2022, Lilia Hassaine reçoit le 41e Prix littéraire de la Ville de Caen. Soleil amer est lauréat du prix lycéen de L'Echappée littéraire 2023.
-
-De 2022 à 2024, Lilia Hassaine est un membre du Prix Méduse ; elle ne l’est plus en 2025.Elle reçoit le prix Renaudot des lycéens pour son troisième roman, Panorama.
-Son roman Je, publié en 2026, est sélectionné dans la première liste du prix Goncourt 2026, du prix Jean Giono et du prix du livre Pentu."),
-(5,'Sonia','Devillers',"Sonia Devillers, née le 31 janvier 1975 aux Lilas, est une journaliste, animatrice de radio et écrivaine française. Après avoir travaillé pendant dix ans au Figaro, elle poursuit principalement sa carrière à France Inter, où elle se spécialise notamment dans l'analyse des médias avec l'émission L'Instant M, qu'elle présente de 2014 à 2022. À partir de 2022, elle conduit des entretiens dans la matinale de la station. Depuis la rentrée 2025, elle prend en charge la seconde partie de La Grande Matinale, de 9 h à 11 h, et y présente notamment Le Grand Portrait.
-
-Depuis 2022, elle présente également sur Arte l'émission Le Dessous des images. Elle publie en 2022 Les Exportés, premier récit consacré à l'histoire de sa famille maternelle juive roumaine et au système par lequel la Roumanie communiste a monnayé l'émigration de certains de ses citoyens juifs."),
+(1, 'Philippe','Jaenada',"Philippe Jaenada est l'auteur d'une douzaine de romans, dont Le Chameau sauvage (Julliard, 1997, prix de Flore), La Petite Femelle (2015) et La Serpe (2017, prix Femina) et plus récemment, chez Mialet-Barrault Éditeurs, Au printemps des monstres et La désinvolture est une bien belle chose (2021 et 2024). Il rejoint en cette rentrée littéraire les Éditions Flammarion."),
+(2, 'Anne', 'Godard', "Anne Godard est née à Paris en 1971, elle enseigne la littérature et l'écriture créative à l'université Sorbonne-Nouvelle. Elle a publié aux Éditions de Minuit L'Inconsolable en 2006 (prix RTL-Lire) et Une chance folle en 2017 (prix Alain Spiess du deuxième roman). Nous aussi est son troisième roman."),
+(3,'Yannick','Haenel',"Yannick Haenel a notamment publié Cercle (prix Décembre 2007 et prix Roger Nimier 2008), Jan Karski (prix Interallié et prix du Roman Fnac 2009) et Tiens ferme ta couronne (prix Médicis 2017)."),
+(4, 'Lilia', 'Hassaine',"Lilia Hassaine est notamment l'autrice de Panorama (2023, prix Renaudot des lycéens). JEest son quatrième roman."),
+(5,'Sonia','Devillers',"Sonia Devillers est journaliste dans la matinale de France Inter et présentatrice du « Dessous des images » sur Arte. Son premier livre, Les Exportés (Flammarion, 2022), raconte comment sa famille a fui la Roumanie communiste."),
 (6,'Louise', 'Chennevière',"À 26 ans, elle sort son premier livre, Comme la chienne, un roman qui donne la parole à plusieurs voix de femmes, à travers leurs expériences douloureuses : psychiatrie, IVG, viol, incestes, pulsions meurtrières, boulimie, culte de l'apparence, transmission des névroses de mère en fille, infanticide, prostitution. Le livre est qualifié de « violent et intelligent, moderne et polyphonique » par le magazine Diacritik.
 
 En 2021, à 28 ans, elle sort son second roman, Mausolée. Il s'agit d'une longue lettre d’amour d’une femme à l’homme qui l’a quittée. Le livre rencontre un grand succès critique et est traduit en espagnol (éditions Dos Manos) et en italien (Giulio Perrone editore).
@@ -136,45 +108,16 @@ En 2015, à la suite des attentats du 13 novembre 2015 en France, il publie dans
 « Le djihadisme est sans doute une maladie de l'islam, mais il entretient précisément avec cette religion le rapport incontestable qu'a une maladie au corps qu'elle dévore. »
 
 En 2026, son ouvrage La Guerre éternelle fait partie de la première sélection du prix Goncourt, du Prix Renaudot de l'essai et du Prix Philippe Sollers."),
-(8,'Ananda','Devi',"Ananda Devi (de son nom complet Ananda Devi Nirsimloo-Anenden), née le 23 mars 1957 à Trois Boutiques dans le district de Grand Port, est une femme de lettres mauricienne. Elle est lauréate du prix Neustadt, le prix littéraire appelé le « Nobel américain »."),
-(9,'Sylvain', 'Prudhomme', "Sylvain Prudhomme, né en 1979 à La Seyne-sur-Mer, est un écrivain français.
-
-Il est l'auteur de romans et de reportages, dont plusieurs ont pour cadre l'Afrique contemporaine, où il a vécu et travaillé."),
-(10,'Clémentine', 'Mélois',"Son premier livre, Cent Titres, paraît en 2014, préfacé par Jacques Roubaud. Il s'agit d'un recueil de cent couvertures de grands classiques de la littérature, détournées par l’image, dans un jeu sur les habitudes de lecture et les codes éditoriaux traditionnels.
-
-En 2017, Sinon j'oublie est un recueil de textes inspirés de sa collection de listes de courses, reproduites en fac-similé. La structure est déterminée par une contrainte déjà utilisée par Georges Perec dans La Vie mode d'emploi : la polygraphie du cavalier.
-
-Entre 2015 et 2018, elle intervient régulièrement dans l'émission Des Papous dans la tête, sur France Culture.
-
-En 2020 est publié l'essai Dehors la tempête. Par des allers-retours entre la vie des personnages de fiction et la sienne, Clémentine Mélois fait pénétrer au plus près de l'imaginaire du lecteur.
-
-En 2021, Les Six Fonctions du langage se présente comme un précis de linguistique sous la forme d'un roman-photo. Les images sont extraites de romans-photos brésiliens des années 1960, retouchées et repeintes à la main.
-
-En 2024, avec Alors c'est bien, récit sur la vie de son père, ses derniers jours et la préparation de son enterrement, est salué par la critique ; il est notamment lauréat des prix Méduse, Georges Brassens et Eugène Dabit.
-
-Elle écrit aussi pour la jeunesse : en 2015, avec Jean-Loup fait des trucs, aux éditions Les Fourmis rouges, elle signe le texte et les dessins. Ce livre est suivi de nombreux autres, en collaboration avec Rudy Spiessert, publiés à L'École des loisirs, notamment la série Les Chiens pirates et Chère Bertille.
-
-Clémentine Mélois est cooptée à l'Oulipo en juin 2017."),
-(11,'Boris', 'Bergmann',"Son premier roman, Viens là que je te tue ma belle, aux éditions Scali, journal imaginaire d'un jeune adolescent qui découvre la nuit et la transgression à travers le rock and roll, reçoit le prix de Flore du lycéen. Ce roman est adapté en 2012 pour Arte par Jean-Stéphane Sauvaire sous le titre de Punk, avec Béatrice Dalle, Paul Bartel, Marie-Ange Casta et Bernie Bonvoisin.
-
-En janvier 2010, il publie son second roman, 1 000 Mensonges, aux éditions Denoël : les confidences d'un menteur qui tombe amoureux.
-
-En août 2016, il sort son troisième roman, Déserteur, aux éditions Calmann-Levy : le récit d'un jeune hacker utilisé par l'armée pour programmer les drones dans la guerre contre le califat. Envoyé en mission dans le désert, il sera forcé de prendre part à des actes terribles qui vont le pousser à s'engager et à se faire face pour la première fois.
-
-Il a également collaboré à de nombreuses revues littéraires (La Règle du Jeu, Edwarda, L'écho d'Orphée, Les Poètes Bodybuildés, Possession Immédiate) ainsi qu'à divers magazines et journaux.
-
-En septembre 2017, il est admis comme pensionnaire de la Villa Medicis, promotion 2017/2018. Son projet porte sur le fanatisme.
-
-En janvier 2018, il sort son quatrième roman, Nage libre : l'histoire d'Issa, jeune d'un Paris populaire, qui va se libérer par la nage, la quête de désirs et d'amitié. Nage Libre reçoit le prix littéraire de la vocation 2018 ainsi que le prix Révélation de la Société des Gens de Lettres."),
-(12,'Jean-Yves', 'Jouannais',"Adolescent, Jean-Yves Jouannais fonde la Revue perpendiculaire. La troupe monte à Paris où Jean-Yves Jouannais devient rédacteur en chef de la revue Art Press.
-
-Jean-Yves Jouannais est l'auteur de plusieurs essais, romans et ouvrages collectifs. Il a été le rédacteur en chef de la revue Exhibition (émission d'art contemporain diffusée sur Arte. Production MK2 TV).
-
-Depuis 2009, il anime le spectacle-conférence vidéo L'encyclopédie des guerres visible au Centre national d'art et de culture Georges-Pompidou et au Palais du Tau à Reims entre autres. Son projet est de compiler une encyclopédie de toutes les guerres de l'histoire de l'humanité, et d'en partager uniquement les citations recueillies."),
-(13, 'Olivier','Grondeau','   '),
+(8,'Ananda','Devi',"Née à l'île Maurice, Ananda Devi est l'autrice d'une oeuvre récompensée par de nombreux prix et traduite en une douzaine de langues. Parmi ses livres les plus marquants, on peut citer Ève de ses décombres (Gallimard, 2006, prix des Cinq Continents, prix RFO, prix Télévision Suisse Romande), Le Sari vert (Gallimard 2009, prix Louis Guilloux), Le Rire des déesses (Grasset, 2021, prix Femina des lycéens) et Le Jour des caméléons (Grasset, 2023, prix de la Langue française). Elle a reçu le prestigieux prix américain Neustadt 2024 pour l'ensemble de son oeuvre."),
+(9,'Sylvain', 'Prudhomme', "Sylvain Prudhomme est l'auteur de romans, récits et reportages salués par la critique et traduits à l'étranger. Il a reçu le prix Femina en 2019 pour Par les routes. L'Enfant dans le taxi a paru en 2023 aux Éditions de Minuit. Coyote, récit d'un voyage le long de la frontière américano-mexicaine, a reçu le prix Nicolas Bouvier 2025."),
+(10,'Clémentine', 'Mélois',"Clémentine Mélois est née en 1980. Elle est notamment l'autrice, aux Editions Grasset, de Cent titres. Sinon j'oublie, Dehors, la tempête, ainsi que du très remarqué Alors c'est bien (« L'Arbalète », Editions Gallimard, 2024)."),
+(11,'Boris', 'Bergmann',"Boris Bergmann est né à Paris en 1992. Il est l'auteur de cinq romans dont Nage Libre (prix de la Vocation 2018) et Les Corps insurgés (Prix Fénéon 2020). Il a été pensionnaire de la Villa Medicis et de la Villa Kujoyama. Il a organisé des expositions en France et à l'étranger (autour de l'oeuvre de René Daumal, notamment) et collabore en tant qu'éditeur associé à la revue d'art et de littérature Magma.
+Minotaure est son premier roman autobiographique."),
+(12,'Jean-Yves', 'Jouannais',"Jean-Yves Jouannais, né en 1964, est professeur à l'École nationale supérieure des beaux-arts de Paris. Il a publié, notamment, L'Idiotie (Beaux-Arts livres), Artistes sans oeuvres (Verticales), Les Barrages de sable (Grasset). De 2008 à 2024, il est l'auteur du cycle de conférences-performances, L'Encyclopédie des guerres, au Centre Pompidou (Paris)."),
+(13, 'Olivier','Grondeau'," Après des études littéraires et des emplois de libraire, Olivier Grondeau est parti huit ans sur les routes, avant d'être arrêté en Iran. Libéré en mars 2025, il poursuit désormais des études d'anthropologie. L'écriture l'a toujours accompagné. Joseph dans la nuit est son premier livre."),
 (14,'Emma', 'Marsantes',' '),
 (15, 'Patrice', 'Trigano',"Dans les années 2000, Patrice Trigano se tourne de plus en plus vers l’écriture tout en conservant son activité de galeriste. Après un premier livre sur l'art et son itinéraire de collectionneur, il a écrit sur Antonin Artaud - un livre salué par le prix Drouot -, Raymond Roussel et Alfred Jarry. Il a publié deux livres de dialogues, le premier avec Alain Jouffroy (À l'ombre des flammes) et le second avec Fernando Arrabal (Rendez-vous à Zanzibar)."),
-(16, 'Thélyson', 'Orélien', "Thélyson Orélien est un écrivain québécois d’origine haïtienne. Poète, romancier, essayiste, chroniqueur et critique, il est notamment l’auteur du roman C’était ça ou mourir, publié en 2026 aux Éditions du Boréal au Québec et annoncé la même année chez Grasset pour l’Europe francophone.")
+(16, 'Thélyson', 'Orélien', "Né en 1988, Thélyson Orélien est un auteur québécois d'origine haïtienne. Poète et critique, il construit une oeuvre habitée par la mémoire, l'exil et la question de l'appartenance. Depuis sa publication au Québec par les Éditions du Boréal, C'était ça ou mourir rencontre un écho international exceptionnel et est en cours de traduction dans plus de vingt langues. Un premier roman phénomène qui révèle une grande voix de la littérature contemporaine.")
 (17,'Pascal', 'Bruckner',"Pascal Bruckner, né le 15 décembre 1948 dans le 15e arrondissement de Paris, est un philosophe, romancier et essayiste français.
 
 Il se fait connaître dès les années 1970-1980 comme l'un des représentants des « nouveaux philosophes ». Après des études de philosophie à l'université université Paris-I, université Paris-VII et à l'École pratique des hautes études, il soutient une thèse consacrée à l'émancipation sexuelle sous la direction de Roland Barthes.
@@ -236,3 +179,6 @@ INSERT INTO jury VALUES
 (8,FALSE,24),
 (9,TRUE,25),
 (10,FALSE,26);
+
+INSERT INTO book VALUES
+(1,'Minotaure',
