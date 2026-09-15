@@ -71,7 +71,7 @@ CREATE TABLE include(
    FOREIGN KEY(i_m_id) REFERENCES main_character(m_id)
 );
 
-INSERT INTO author VALUES 
+INSERT INTO author VALUES
 (1, 'Philippe','Jaenada',"Philippe Jaenada est né à Saint-Germain-en-Laye où ses grands-parents maternels possédaient le restaurant Le Grand Cerf. Issu d’une famille de pieds-noirs récemment revenue d’Algérie, il grandit dans une banlieue pavillonnaire, à Morsang-sur-Orge en Essonne. Après des études scientifiques, il s’installe à Paris en 1986 où il enchaîne les petits boulots pendant plusieurs années. Sa première nouvelle est publiée en 1990 dans L'Autre Journal. Ses sept premiers romans sont d'inspiration autobiographique. Outre ses livres, il a écrit des articles pour le magazine Voici pendant plusieurs années, avant d’arrêter en 2022 pour se concentrer pleinement à ses romans. Avec sa compagne Anne-Catherine Fath, ils ont un fils, Ernest, né en août 2000. Habitant le 10e arrondissement, il a ses habitudes au Bistrot Lafayette."),
 (2, 'Anne', 'Godard', "Anne Godard est la fille d'un père libraire. Après un CAPES et une agrégation de lettres modernes obtenue en 1995, Anne Godard soutient en 2000 sa thèse (sous la direction d'Yves Hersant) sur le thème de « La Renaissance dialogique. Imitation et dialogisme dans les dialogues de la Renaissance ». En 2002, elle devient maitresse de conférence en « Langue et littérature françaises » à l'université Sorbonne-Nouvelle où elle enseigne dans le département de français langue étrangère. Ses travaux portent sur la lecture subjective, l'écriture créative et le plurilinguisme littéraire.
 
@@ -222,4 +222,17 @@ Il entre à l'Académie Goncourt le 11 janvier 2012 au couvert de Jorge Semprún
 Lundi 13 mai 2024, Philippe Claudel est élu nouveau président de l’académie Goncourt."),
 (26, 'Pierre','Assouline',"Pierre Assouline est un journaliste, chroniqueur de radio, romancier et biographe français, né le 17 avril 1953 à Casablanca (alors dans le protectorat français au Maroc).
 
-Ancien responsable du magazine Lire, membre du comité de rédaction de la revue L'Histoire et membre de l'académie Goncourt depuis 2012, il a notamment écrit les biographies de Marcel Dassault, Georges Simenon, Gaston Gallimard, Jean Jardin, Daniel-Henry Kahnweiler, Albert Londres ou encore Hergé. Il est l'auteur de milliers d'articles et de chroniques radio.")
+Ancien responsable du magazine Lire, membre du comité de rédaction de la revue L'Histoire et membre de l'académie Goncourt depuis 2012, il a notamment écrit les biographies de Marcel Dassault, Georges Simenon, Gaston Gallimard, Jean Jardin, Daniel-Henry Kahnweiler, Albert Londres ou encore Hergé. Il est l'auteur de milliers d'articles et de chroniques radio.");
+
+
+INSERT INTO jury VALUES
+(1,FALSE,17),
+(2,FALSE,18),
+(3,FALSE,19),
+(4,FALSE,20),
+(5,FALSE,21),
+(6,FALSE,22),
+(7,FALSE,23),
+(8,FALSE,24),
+(9,TRUE,25),
+(10,FALSE,26);
