@@ -250,3 +250,138 @@ Il y a quelque trente-trois siècles, des guerriers grecs ravagent une cité d'A
 'Gallimard','2026-08-20',219,9782073121349,20,7),
 (16,'Bataille au procès',"En 1956, Georges Bataille est appelé à témoigner au procès de Jean-Jacques Pauvert, poursuivi pour avoir publié les œuvres de Sade. L’auteur d'Histoire de l'oeil comprend que la morale menace de mort la littérature. L’audience devient le miroir de sa propre vie. Les souvenirs affluent : enfance marquée par la folie d’un père aveugle et paralytique, l’indifférence d’une mère réfugiée dans la religion. Des événements qui ont émaillé son parcours surgissent : expériences limites dans ses amours placées sous l’égide de la transgression, visions de guerre et de sacrifice qui le hantent, traversée du mal, liens tourmentés avec le parti communiste, haine du fascisme… Réflexions et fulgurances se mêlent en un vertige où pensée et vie s’entrelacent, entre érotisme et sacré, extase et mort. Mais derrière ces éclats affleure aussi une énigme plus obscure. Refusera-t-elle de se dévoiler ?À travers cet épisode de la vie littéraire, Patrice Trigano accompagne Bataille au plus près de son vertige intérieur. Il explore ce point où l’écriture n’obéit plus à l’auteur, où l’œuvre surgit comme une puissance étrangère, excessive, qui le dépasse.Patrice Trigano a fait des études de droit et de philosophie avant de consacrer sa vie à l’art en tant que galeriste, écrivain et dramaturge. Ses livres sont publiés aux éditions de la Différence, Léo Scheer, Mercure de France et Maurice Nadeau. Il a publié en 2024, La Promesse de l’art, Mémoires d’un galeriste aux Éditions du Canoë.",
 'M.Nadeau','2026-08-21',136,9782862316857,19,15);
+
+INSERT INTO main_character VALUES
+(1,'Le','Père'),
+(2,'Le','Minotaure');
+
+INSERT INTO include VALUES
+(1,1),
+(1,2);
+
+INSERT INTO main_character VALUES
+(3,'La','Mère'),
+(4,'La','Fille');
+
+INSERT INTO include VALUES
+(2,3),
+(2,4);
+
+INSERT INTO main_character VALUES
+(5,'Fondateur','1'),
+(6,'Fondateur','2'),
+(7,'Fondateur','3'),
+(8,'Fondateur','4'),
+(9,'Fondateur','5'),
+(10,'Madame',' '),
+(11,'Vieux','Bouc'),
+(12,'Enfant','Timide');
+
+INSERT INTO include VALUES
+(3,5),
+(3,6),
+(3,7),
+(3,8),
+(3,9),
+(3,10),
+(3,11),
+(3,12);
+
+INSERT INTO main_character VALUES
+(13,'Les','Nazis'),
+(14,'Les','Enoch');
+
+INSERT INTO include VALUES
+(4,13),
+(4,14);
+
+
+INSERT INTO main_character VALUES
+(15,'Nous',' ');
+
+INSERT INTO include VALUES
+(5,15);
+
+INSERT INTO main_character VALUES
+(16,'Joseph',' '),
+(17,'Olivier',''),
+(18,'Britney','Spears');
+
+INSERT INTO include VALUES
+(6,16),
+(6,17),
+(6,18);
+
+INSERT INTO main_character VALUES
+(19,'Jean','Deichel')
+
+INSERT INTO include VALUES
+(7,19);
+
+INSERT INTO main_character VALUES
+(20,'Antoinette','Cosway'),
+(21,'Edward','Rochester');
+
+INSERT INTO include VALUES
+(8,20),
+(8,21);
+
+INSERT INTO main_character VALUES
+(22,'Louise','Cansot'),
+(23,'Suspect','1'),
+(24,'Suspect','2'),
+(25,'Suspect','3'),
+(26,'Suspect','4'),
+(27,'Inspecteur-chef','Ferrière');
+
+INSERT INTO include VALUES
+(9,22),
+(9,23),
+(9,24),
+(9,25),
+(9,26),
+(9,27);
+
+INSERT INTO main_character VALUES
+(28,'Capitaine','Lenz');
+
+INSERT INTO include VALUES
+(10,28);
+
+INSERT INTO main_character VALUES
+(29,'Une','Femme'),
+(30,'Un','Homme');
+
+INSERT INTO include VALUES
+(11,29),
+(11,30);
+
+INSERT INTO main_character VALUES
+(31,'Musclor','');
+
+INSERT INTO include VALUES
+(12,29),
+(12,30),
+(12,31);
+
+INSERT INTO main_character VALUES
+(32,'Jonas','Dorléon');
+
+INSERT INTO include VALUES
+(13,32);
+
+INSERT INTO main_character VALUES
+(33,'Paola',' ');
+
+INSERT INTO include VALUES
+(14,33);
+
+INSERT INTO main_character VALUES
+(34,'Georges','Bataille'),
+(35,'Jean-Jacques','Pauvert');
+
+INSERT INTO include VALUES
+(16,34),
+(16,35),
+(16,1),
+(16,3);
