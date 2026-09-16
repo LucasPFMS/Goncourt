@@ -10,5 +10,5 @@ class Author:
     last_name: Optional[str] = field(default=None, init=False)
     biography: Optional[str] = field(default=None, init=False)
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.first_name} {self.last_name} {self.biography}"
