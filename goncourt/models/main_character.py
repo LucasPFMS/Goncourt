@@ -6,8 +6,8 @@ from typing import Optional
 class MainCharacter:
     """Classe d'un personnage principal"""
     id: Optional[str] = field(default=None, repr=False)
-    first_name: Optional[str] = field(default=None, repr=False)
-    last_name: Optional[str] = field(default=None, repr=False)
+    mc_first_name: Optional[str] = field(default=None, repr=False)
+    mc_last_name: Optional[str] = field(default=None, repr=False)
 
     def __str__(self) -> str:
-        return f"{self.first_name} {self.last_name}"
+        return f"{self.mc_first_name} {self.mc_last_name}"

@@ -6,9 +6,9 @@ from typing import Optional
 class Author:
     """Classe d'un auteur"""
     id: Optional[int] = field(default=None, init=False)
-    first_name: Optional[str] = field(default=None, init=False)
-    last_name: Optional[str] = field(default=None, init=False)
+    a_first_name: Optional[str] = field(default=None, init=False)
+    a_last_name: Optional[str] = field(default=None, init=False)
     biography: Optional[str] = field(default=None, init=False)
 
     def __str__(self) -> str:
-        return f"{self.first_name} {self.last_name} {self.biography}"
+        return f"{self.a_first_name} {self.a_last_name} {self.biography}"

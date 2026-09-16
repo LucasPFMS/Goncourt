@@ -16,5 +16,5 @@ class Book(Author):
     price: Optional[float] = field(default=None, repr=False)
 
     def __str__(self) -> str:
-        return (f'{self.first_name} {self.last_name} {self.title}{self.nb_pages}{self.isbn}{str(self.price)}'
+        return (f'{self.a_first_name} {self.a_last_name} {self.title}{self.nb_pages}{self.isbn}{str(self.price)}'
                 f'{str(self.editor)}{str(self.publication_date)}{self.summary}')

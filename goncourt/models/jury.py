@@ -10,4 +10,4 @@ class Jury(Author):
     is_president: Optional[bool] = field(default=None, repr=False)
 
     def __str__(self) -> str:
-        return f"{self.first_name} {self.last_name} {self.is_president}"
+        return f"{self.a_first_name} {self.a_last_name} {self.is_president}"
