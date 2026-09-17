@@ -10,7 +10,7 @@ class AuthorDao(Dao[Author]):
         """Crée en BD l'entité Author correspondant à l'auteur author"""
         try:
             cursor = Dao.connection.cursor()
-            cursor.execute("INSERT INTO autor VALUES(%s)", (author.a_first_name, author.a_last_name, author.biography))
+            cursor.execute("INSERT INTO author VALUES(%s)", (author.a_first_name, author.a_last_name, author.biography))
             Dao.connection.commit()
             return cursor.lastrowid
         except Exception:
