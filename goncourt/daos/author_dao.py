@@ -33,7 +33,7 @@ class AuthorDao(Dao[Author]):
             cursor.execute(sql, (a_id,))
             record = cursor.fetchone()
         if record is not None:
-            author = Author(record['first_name'], record['last_name'], record['biography'])
+            author = Author(record['a_first_name'], record['a_last_name'], record['a_biography'])
             author.id = record['a_id']
         else:
             author = None
@@ -47,7 +47,7 @@ class AuthorDao(Dao[Author]):
         :return: True si la mise à jour a pu être réalisée
         """
         cursor = Dao.connection.cursor()
-        cursor.execute("UPDATE author SET first_name = %s, last_name = %s, biography = %s WHERE a_id = %s",)
+        cursor.execute("UPDATE author SET a_first_name = %s, a_last_name = %s, a_biography = %s WHERE a_id = %s",)
         Dao.connection.commit()
         ...
         return True
@@ -59,6 +59,6 @@ class AuthorDao(Dao[Author]):
         :return: True si la suppression a pu être réalisée
         """
         cursor = Dao.connection.cursor()
-        cursor.execute("DELETE FROM author WHERE a-id=%s")
+        cursor.execute("DELETE FROM author WHERE a_id=%s")
         ...
         return True
