@@ -58,6 +58,26 @@ Bienvenue pour le résultat du prix Goncourt
                     if book.id == id_chose:
                         third_selection.append(goncourt.get_book_by_id(id_chose))
                         i += 1
+    print("Qui êtes vous ? (utilisateur/president")
+    is_president = input()
+    if is_president == "utilisateur":
+        # affichage de la liste des livres
+        goncourt.display_books_list()
+        print("deuxième sélection:")
+        print(second_selection)
+        print("troisième sélection:")
+        print(third_selection)
+    else:
+        if is_president == "president":
+            print("voici la liste des livres, choisis le nombre de votes puis choisi le gagnant")
+            print(third_selection)
+            for book in third_selection:
+                id_chose = int(input())
+                if book.id == id_chose:
+                    print("voici le gagnant")
+                    print(book.title)
+                    
+
 
     # affichage de la liste des cours, leur enseignant et leurs élèves
 
