@@ -60,5 +60,3 @@ class Goncourt:
         author_dao: AuthorDao = AuthorDao()
         return author_dao.read(id_author)
 
-
-
