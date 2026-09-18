@@ -60,3 +60,7 @@ class Goncourt:
         author_dao: AuthorDao = AuthorDao()
         return author_dao.read(id_author)
 
+    @staticmethod
+    def get_book_by_id(id_book: int) -> Optional[Book]:
+        book_dao: BookDao = BookDao()
+        return book_dao.read(id_book)
